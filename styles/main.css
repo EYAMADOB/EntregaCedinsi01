@@ -1,0 +1,11 @@
+.contendor-general{
+    background-color: #ffffff;
+    font-family: 'Monteserrat', 'arial';
+}
+.contenedor-principal{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: white;
+    width: 1200px;
+    margin: 40px auto;
+}
