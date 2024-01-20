@@ -38,7 +38,6 @@
 #proyectos{
     background-color: white;
     margin-bottom: 20px;
-
 }
 .titulo-seccion-principal{
     font-weight: 700;
@@ -69,13 +68,11 @@ span{
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
-
 }
 .experiencia-laboral{
     margin-top: 20px;
     padding-top: 20px;
     margin-bottom: 40px;
-
 }
 #empresa-1{
     margin-top: 5px;
@@ -101,7 +98,6 @@ span{
 aside {
     background-color: #1E2939;
     padding 40px 0;
-
 }
 li{
     line-height: 24px;
@@ -135,4 +131,10 @@ li{
 }
 .lista-lateral{
     padding-left: 17px;
+}
+.lista-lateral >li{
+    color: orange;
+}
+.elemento-lista-lateral{
+    color: white;
 }
