@@ -5,12 +5,17 @@
     background-color: rgba(35, 181, 211, 0.20); 
 }
 #colorbarra{
-    background: rgba(35, 181, 211, 0.20);
+    /*background: rgba(35, 181, 211, 0.20);
     margin-top: 75px;
-    padding-left: 130px;
+    padding-left: 130px;*/
+    
+}
+.barra-de-navegacion{
+    /*display: flex;
+    justify-content: space-around;*/
 }
 li{
     font-size: 20px;
     font-weight: 700;
-    padding-left: 150px;
+    /*padding-left: 150px;*/
 }
