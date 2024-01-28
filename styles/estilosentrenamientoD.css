@@ -46,13 +46,16 @@ form{
     text-align: center;
 }
 .titulo-registro-informacion{
-    /*font-size: 10px;
-    /*font-weight: 700;*/
     color: white;
     font-size: 31px;
+    padding-top : 30px;
 }
-/*form>h1{
-    font-size: 31px;
-    color: white;
+.input-text{
+    border-radius: 8px;
+    border-color: #23B5D3;
+    background-color: rgba(35, 181, 211, 0.20);
 }
-
+button{
+    background-color: #DBDA00;
+    border-radius: 12px;   
+}
