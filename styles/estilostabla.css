@@ -1,0 +1,47 @@
+
+body{
+    background-color:darkgray;
+    
+}
+table{
+    border-collapse: collapse;
+    cursor: pointer;    
+    width: 80%;
+    margin:auto;
+
+}
+table thead{
+    background-color: #0077b6;
+    color: white;
+    border: 1px solid #fff;
+}
+table tbody{
+    background-color:#fee440;
+    border: 1px solid #fff;
+}
+table tfoot{
+    background-color: #1e6091;
+    color:#fff;
+    text-align: center;
+}
+td , th {
+    padding: 10px;
+}
+tr:hover{
+    background-color: cadetblue;
+    color:white;
+}
+tr:active{
+    background-color:#184e77;
+    color:white;
+}
+
+tr{
+    transition: all ease 300ms;
+}
+table caption{
+    font-size: 4em; /*tamaño del texto*/
+    color: #042d42; /*Color del texto*/
+    text-align: center;/*alineacion del texto en este caso al centro*/
+    font-family: 'Mina', sans-serif;
+}
