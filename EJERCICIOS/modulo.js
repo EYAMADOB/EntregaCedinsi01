@@ -87,7 +87,7 @@ switch(seleccion){
                    break;
                 }                
 */
-//Cuarto ejercicio
+/*Cuarto ejercicio
 const factorconversion = 3.785;
 const costocl =25;
 let costotanqueada = 0;
@@ -98,4 +98,49 @@ galon=parseFloat(galon);
 litros=galon*factorconversion;
 costotanqueada=((litros*100)*25);
 document.write("La cantidad despachada en litros es: "+litros+"y su costo es de:  "+costotanqueada);
+
+*/
+//EJERCICIO 5
+let salarioempleado =0;
+const auxitrans =0.06;
+const despension = 0.02;
+const despensionmedio = 0.04;
+const subfamiliar = 12000;
+const despensionalto = 0.06
+let basico=0;
+let sueldo = 0;
+
+basico=prompt("Digita el sueldo basico ");
+basico = parseInt(basico);
+if (basico > 1000000)
+            {   
+                sueldo = basico;
+                sueldo = sueldo - (basico*despensionalto);
+                document.write(sueldo);
+            }
+else
+    {
+        if (basico < 999999) 
+            {
+                if (basico < 699999)
+                    {
+                        sueldo= basico;
+                        sueldo = sueldo - (basico*despension);
+                        sueldo = sueldo + (basico*auxitrans);
+                        document.write(sueldo);
+                    }
+                else 
+                    {
+                        sueldo= basico;
+                        sueldo = sueldo - (basico*despensionmedio);
+                        sueldo = sueldo + 12000;
+                        document.write(sueldo);
+                    }  
+            }
+    }
+    
+
+
+
+
 
