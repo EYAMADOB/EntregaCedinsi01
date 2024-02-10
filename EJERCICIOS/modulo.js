@@ -352,8 +352,183 @@ else
     }while (continuar == true)
         //let nuevoarreglo = arreglocho.sort();
 }  
+function ejerciciodiez(){
+        let arreglodiez = [];
+        let limite = 0;
+        const constc= 0;
+        const constu= 1;
+        let continuar =false;
+        limite = prompt("Cuantos elementos debe contener el arreglo?");
+        limite = parseInt(limite);
+            for(let i=0; i<limite; i++)
+            {
+                arreglodiez.push(constc);
+                i++;
+                if (i==limite)
+                {
+                    continue;
+                }
+                arreglodiez.push(constu);
+            }
+        alert("El arreglo se impirmira en la consola");
+        console.log(arreglodiez)    
+    }
 
+function ejercicioonce(){
+    function arreglopares(numero){
+        let num = 2;
+        const arrNumeros =[];
+        for (let i=0; i<numero; i++)
+        {
+            arrNumeros.push(num);
+            num += 2
+        }
+        return alert(arrNumeros);    
+    }
+    let continuar =false ;
+    do{
+        let numero = 0;
+        let datoconfirmar = 0;
+        datoconfirmar=prompt("digita el tamaño del arreglo recuerda debe ser un numero impar");
+        datoconfirmar=parseInt(datoconfirmar);
+        if (isNaN(datoconfirmar))
+        {
+            alert("Error, No digitaaste un numero");
+        }
+        else
+        {
+            if(datoconfirmar % 2 == 0)
+            {
+                alert("El numero no es par para que cumpla la condición se asignara el numero impar que le sigue");
+                datoconfirmar += 1;
+                arreglopares(datoconfirmar);
+            } 
+            else 
+            {
+                arreglopares(datoconfirmar);  
+            }
+        }
+        continuar = confirm("Quieres ingresar mas datos");
+    } while (continuar == true);
+ }
+ function ejerciciodoce(){
+    let arreglodoce =[];
+    let num = 1;
+    let contador = 2;
+    let siguienteuno =0;
+    let siguientedos =0;
+    let enlinea = 0;
+    arreglodoce.push(num);
+    arreglodoce.push(num);
+    let i=0;
+    for(let a=0; a<=100; a++)
+    {
+        siguienteuno = i;
+        siguientedos = i+1;
 
+        enlinea = arreglodoce[siguienteuno]+arreglodoce[siguientedos];
+        arreglodoce.push(enlinea);
+        i++;
+        contador=+1;
+    }
+    alert(arreglodoce);
+} 
+function ejerciciotrece(){
+    let arreglopares=[];
+    let arreglosuma=[];
+    let a=0;
+    let suma=0;
+    for(let i=0;i<=100; i++)
+    {
+        arreglopares.push(a);
+        suma = suma+a;
+        //arreglosuma.push(suma);
+        a=a+2;
+    }
+    alert("este es el arreglo de los 100 primeros pares " + arreglopares);
+    alert('Esta es la suma : ' + suma);
+}
+function ejerciciocatorce(){
+
+    alert("Ejercicio Catoce");
+    let continuar= false;
+    let arreglopositivos = [];
+    let arreglonegativos = [];
+    let cantpositivos = 0;
+    let cantidadnegativos = 0;
+    let numero = 0;
+    do
+    {
+    numero = prompt("Digita numero");
+    numero =  parseInt(numero);
+    if (isNaN(numero))
+    {
+        alert("Error, No digitaaste un numero");
+    }   
+    else {
+        if(numero>0){
+            arreglopositivos.push(numero);
+            cantpositivos =cantpositivos + 1;    
+        }
+        else
+        {
+            arreglonegativos.push(numero);
+            cantidadnegativos= cantidadnegativos + 1;
+        }
+    }
+    continuar = confirm("Quieres ingresar mas numeros");
+    } while (continuar == true)
+    alert("Estos son los numeros positivos que ingresaste : " + arreglopositivos);
+    alert("la cantidad de positivos ingresados son  " + cantpositivos );
+    alert("Estos son los numeros negativos que ingresaste : " + arreglonegativos);
+    alert("la cantidad de negativos  ingresados son  " + cantidadnegativos );
+    
+ }  
+
+/*
+ejercicioclases(){
+    class Usuario {
+    constructor(nombre, correo, documento){
+        this.nombre = nombre;
+        this.correo = correo;
+        this.documento = documento;
+    }
+
+    validarNombre(){
+        return this.nombre !== '';
+    }
+    validarcorreo(){
+        const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+        if(regexEmail.test(this.email)){
+            return this.correo
+        }
+    }
+
+}
+
+class GestionUsuarios {
+    constructor(){
+        this.usuarios = []
+    }
+
+    agregarUsuario(nombre, correo, documento){
+        const nuevoUsuario = new Usuario(nombre);
+        if(nuevoUsuario.validarNombre() && nuevoUsuario.validarcorreo()){
+            this.usuarios.push(nuevoUsuario)
+        }
+    }
+
+    
+}
+
+let agregarUsuario = new GestionUsuarios();
+
+agregarUsuario.agregarUsuario('Daniel')
+agregarUsuario.agregarUsuario('Catalina')
+agregarUsuario.agregarUsuario('')
+
+console.log(agregarUsuario.usuarios, 'Ver la clase GestionUsuarios')
+}*/
 //ejerciciosuno();
 //ejerciciodos();
 //ejerciciotres();
@@ -363,3 +538,10 @@ else
 //ejerciciosiete();
 //ejercicioocho();
 //ejercicionueve();
+//ejerciciodiez();
+//ejercicioonce();/
+//ejercicioclases();
+// ejerciciodoce();
+//ejerciciotrece();
+//ejerciciocatorce();
+//ejercicioclases();
