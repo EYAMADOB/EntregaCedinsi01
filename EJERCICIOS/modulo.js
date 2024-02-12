@@ -485,22 +485,25 @@ function ejerciciocatorce(){
     
  }  
 
-/*
-ejercicioclases(){
+
+function ejercicioclases(){
     class Usuario {
-    constructor(nombre, correo, documento){
+    constructor(nombre,correo,contrasena){
         this.nombre = nombre;
         this.correo = correo;
-        this.documento = documento;
+        this.contrasena = contrasena;
     }
 
     validarNombre(){
         return this.nombre !== '';
     }
-    validarcorreo(){
+    validarContrasena(){
+        return this.contrasena !== '';
+    }
+    validarCorreo(){
         const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
-        if(regexEmail.test(this.email)){
-            return this.correo
+        if(regexEmail.test(this.correo)){
+            return this.correo;
         }
     }
 
@@ -511,9 +514,9 @@ class GestionUsuarios {
         this.usuarios = []
     }
 
-    agregarUsuario(nombre, correo, documento){
-        const nuevoUsuario = new Usuario(nombre);
-        if(nuevoUsuario.validarNombre() && nuevoUsuario.validarcorreo()){
+    agregarUsuario(nombre,correo,contrasena){
+        const nuevoUsuario = new Usuario(nombre,correo,contrasena);
+        if(nuevoUsuario.validarNombre() && nuevoUsuario.validarCorreo() && nuevoUsuario.validarContrasena()){
             this.usuarios.push(nuevoUsuario)
         }
     }
@@ -523,12 +526,11 @@ class GestionUsuarios {
 
 let agregarUsuario = new GestionUsuarios();
 
-agregarUsuario.agregarUsuario('Daniel')
-agregarUsuario.agregarUsuario('Catalina')
-agregarUsuario.agregarUsuario('')
-
+agregarUsuario.agregarUsuario('Daniel','hola@gmail.com','1ad')
+agregarUsuario.agregarUsuario('Catalina','adios@gmail.co','256')
+agregarUsuario.agregarUsuario('','','')
 console.log(agregarUsuario.usuarios, 'Ver la clase GestionUsuarios')
-}*/
+}
 //ejerciciosuno();
 //ejerciciodos();
 //ejerciciotres();
@@ -544,4 +546,4 @@ console.log(agregarUsuario.usuarios, 'Ver la clase GestionUsuarios')
 // ejerciciodoce();
 //ejerciciotrece();
 //ejerciciocatorce();
-//ejercicioclases();
+ejercicioclases();
