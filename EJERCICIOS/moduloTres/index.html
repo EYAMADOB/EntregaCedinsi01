@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODULO TRES</title>
+    <link rel="stylesheet" href="./maintres.css">
+</head>
+<body>
+    <form  class="form" id="form">
+    <div class="formulario__grupo" id="grupo__nombre">
+        <label for="nombre" class="formulario__label"> nombre</label>
+        <div class="formulario__grupo-input">
+            <input type="text" placeholder="NOMBRES" name="nombre" class="formulario__input" id="nombre"> 
+            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+        </div>
+        <p class="formulario__input-error">El nombre debe ser de 2 a 60 letras</p>
+    </div> 
+    
+    <div class="formulario__grupo" id="grupo__apellido">
+        <label for="apellido" class="formulario__label">Apellidos</label>
+        <div class="formulario__grupo-input">
+            <input type="text" placeholder="APELLIDOS" name="apellido" class="formulario__input" id="apellido"> 
+            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+        </div>
+        <p class="formulario__input-error">Este campo solo contienE de 2 a 60 letras</p>
+    </div> 
+
+    <div class="formulario__grupo" id="grupo__documento">
+        <label for="documento" class="formulario__label"> documento</label>
+        <div class="formulario__grupo-input">
+            <input type="text" placeholder="documento" name="documento" class="formulario__input" id="documento"> 
+            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+        </div>
+        <p class="formulario__input-error">Este campo solo permite números</p>
+    </div> 
+
+    <div class="formulario__grupo" id="grupo__correo">
+        <label for="correo" class="formulario__label"> correo</label>
+        <div class="formulario__grupo-input">
+            <input type="email" placeholder="correo" name="correo" class="formulario__input" id="correo"> 
+            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+        </div>
+        <p class="formulario__input-error">Debe ser un correo valido</p>
+    </div> 
+
+    <div class="formulario__grupo" id="grupo__usuario">
+        <label for="usuario" class="formulario__label"> usuario</label>
+        <div class="formulario__grupo-input">
+            <input type="text" placeholder="usuario" name="usuario" class="formulario__input" id="usuario"> 
+            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+        </div>
+        <p class="formulario__input-error">El nombre debe ser de 2 a 60 caracteres solo letras</p>
+    </div> 
+
+    <div class="formulario__grupo" id="grupo__observaciones">
+        <label for="observaciones" class="formulario__label"> observaciones</label>
+        <div class="formulario__grupo-input">
+            <input type="text" placeholder="observaciones" name="observaciones" class="formulario__input" id="observaciones"> 
+            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+        </div>
+        <p class="formulario__input-error">Este campo solo acepta 200 caracteres</p>
+    </div> 
+      <!-- Grupo terminos y condiciones-->
+      <div class="formulario__grupo" id="grupo__terminos">
+        <label class="formulario__label">
+            <input class="formulario__checkbox"  type="checkbox" name="terminos" id="terminos">
+            Acepto los terminos y condiciones
+        </label>
+      </div>
+      <div class="formulario__mensaje" id="formulario__mensaje">
+        <p><i class="fa-solid fa-triangle-exclamation"></i> <b>Error:</b> Por favor rellene completamente el formulario </p>
+      </div>
+      <div class="formulario__grupo formulario__grupo-btn-enviar">
+        <button type="submit" class="formulario__btn">Enviar</button>
+        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+      </div>
+    </form>
+    <script src="modulotres.js"></script>
+    <script src="https://kit.fontawesome.com/d6a79537b5.js" crossorigin="anonymous"></script>
+</body>
+</html>

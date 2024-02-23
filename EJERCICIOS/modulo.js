@@ -546,4 +546,4 @@ console.log(agregarUsuario.usuarios, 'Ver la clase GestionUsuarios')
 // ejerciciodoce();
 //ejerciciotrece();
 //ejerciciocatorce();
-ejercicioclases();
+//ejercicioclases();

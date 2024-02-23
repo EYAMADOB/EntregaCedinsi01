@@ -1,0 +1,153 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	/*font-family: 'Roboto', sans-serif;*/
+	background: #E5E5E5;
+}
+
+.form{
+    display: grid; /*para trabajar  con grid*/
+    grid-template-columns: 1fr 1fr; /*para que queden dos culumnas */
+    gap: 20px; /*espaciado entre columnas*/
+}
+.formulario__label{
+    display: block;/*para que abarque el 100%*/
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer; /*para que cuando seleccione el label seleccione el input*/
+
+}
+.formulario__grupo-input{
+    position: relative;
+}
+.formulario__input{
+    width: 100%;
+    background: #fff;
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 48px 0 10px;
+    transition: .3s ease all; /*funcion de tiempo ease 3 segundos para las propiedades*/
+}
+/*caundo le den un focus cambia la transicion*/
+.formulario__input:focus{
+    border: 3px  solid #0075ff;
+    outline: none; /*quitar subrayado que pone el navegador*/
+    box-shadow: 3px 0px 30px rgb(163,163,163 0.4); /*0.4 corresponde a una transparencia*/
+}
+
+.formulario__input-error{
+    font-size: 12px;
+    margin-bottom: 0px;
+    display: none;/*esto lo hace invisible*/
+}
+
+.formulario__input-error-activo{/*modificador activo con display bloqwue para mostrarlo*/
+        display: block;
+}
+.formulario__validacion-estado{
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+    z-index: 100;/*asegura que este por encima de otros elementos*/
+    font-size: 16px;
+    opacity: 0;/*con esta propiedad desaperezco el icono*/
+}
+.formulario__checkbox{
+    margin-right: 10px;
+}
+.formulario__grupo-terminos,
+.formulario__mensaje,
+.formulario__grupo-btn-enviar{
+    grid-column: span 2;
+}
+
+.formulario__mensaje{
+    height: 45px;
+    line-height: 45px;
+    background: #f66868;
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;
+}
+/*conel modificador de activo para hacerlo activo*/
+.formulario__mensaje-activo{
+    display: block;
+}
+formulario__grupo-btn-enviar{
+    display: flex;
+    flex-direction: column;/*para que el texto quede debajo del boton*/
+    align-items: center;/*para centrarlos*/
+}
+.formulario__btn{
+    height: 45px;
+    line-height: 45px;
+    width: 30%;
+    background: black;
+    color: #fff;/*color texto*/
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 1s ease all;
+
+}
+
+.formulario__btn:hover{
+    box-shadow: 3px 0px 30px rgb(163,163,163 1);
+}
+.formulario__mensaje-exito{
+    font-size: 14px;
+    color: #0075ff;
+    display: none;
+
+}
+.formulario__mensaje-exito-activo{
+display: block;
+}
+
+
+.formulario__mensaje p{
+    margin: 0;
+}
+
+/*estilos para validacion*/
+
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+	border: 3px solid #bb2929;
+}
+
+
+
+/* ----- -----  Mediaqueries ----- ----- */
+@media screen and (max-width: 800px) {
+	.formulario {
+		grid-template-columns: 1fr;
+	}
+
+	.formulario__grupo-terminos, 
+	.formulario__mensaje,
+	.formulario__grupo-btn-enviar {
+		grid-column: 1;
+	}
+    .formulario__btn {
+		width: 100%;
+	}
+}
