@@ -32,6 +32,8 @@ class usuarios {
 const formulario=document.getElementById("formulario");
 const inputs = document.querySelectorAll("#formulario input");
 
+
+
 /*Objeto con expresiones regulares para validacion*/
 const expresiones ={
     enombre:/^([a-zA-Z\s]+){2,60}$/,
